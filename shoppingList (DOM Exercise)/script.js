@@ -1,6 +1,7 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var listItems = document.getElementsByTagName("li");
 
 function inputLength() {
     return input.value.length;
@@ -59,3 +60,28 @@ input.addEventListener("keypress", addListAfterKeypress);
 //         input.value = "";
 //     }
 // })
+
+ul.onclick = function (event) {
+    var target = event.target;
+    target.classList.toggle("done");
+}
+
+function listLength() {
+    return listItems.length;
+}
+
+function removeParent(e) {
+    e.target.parentNode.remove();
+}
+
+
+function deleteButton() {
+    var dtbn = document.createElement("button");
+    dtbn.appendChild(document.createTextNode("Delete"));
+    listItems[i].appendChild(dtbn);
+    dtbn.onclick = removeParent;
+}
+
+for( i=0; i<listLength(); i++){
+    deleteButton();
+    }
