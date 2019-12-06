@@ -1,2 +1,2 @@
 # learnToCode
-exercises and documentation through my learning process
+project exercises and documentation through my learning journey
